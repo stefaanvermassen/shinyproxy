@@ -6,7 +6,7 @@ proxy:
     app-base-url: https://shinyproxy.potentia.cloud
     roles-attribute: http://schemas.microsoft.com/ws/2008/06/identity/claims/role
   port: 8080
-  authentication: simple
+  authentication: saml
   admin-groups: admins
   container-backend: kubernetes
   kubernetes:
