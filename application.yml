@@ -1,14 +1,11 @@
 
 proxy:
+  saml:
+    idp-metadata-url: https://login.microsoftonline.com/b15748f8-c407-4b7e-a418-dd0eb048bb3f/FederationMetadata/2007-06/FederationMetadata.xml
+    app-entity-id: api://59932e2c-8f3b-4c36-bd10-593758d8209a
+    app-base-url: https://shinyproxy.potentia.cloud
+    roles-attribute: http://schemas.microsoft.com/ws/2008/06/identity/claims/role
   port: 8080
-  authentication: simple
-  admin-groups: admins
-  users:
-  - name: jack
-    password: password
-    groups: admins
-  - name: jeff
-    password: password
   container-backend: kubernetes
   kubernetes:
     internal-networking: true
